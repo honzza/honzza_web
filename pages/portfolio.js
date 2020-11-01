@@ -4,8 +4,7 @@ export default function Portfolio() {
   return (
     <Layout>
       <div>
-        <h1>portfolio</h1>
-        <p>some text here</p>
+        <p>portfolio</p>
       </div>
     </Layout>
   );

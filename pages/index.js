@@ -3,7 +3,9 @@ import Layout from "../components/Layout";
 export default function Index() {
   return (
     <Layout>
-      <div>home alone</div>
+      <div>
+        <p>home alone</p>
+      </div>
     </Layout>
   );
 }

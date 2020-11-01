@@ -4,8 +4,7 @@ export default function Contact() {
   return (
     <Layout>
       <div>
-        <h1>contact</h1>
-        <p>some text here</p>
+        <p>contact</p>
       </div>
     </Layout>
   );

@@ -1,26 +1,50 @@
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
 
 export default function Navbar() {
   return (
-    <div className={styles.navbar}>
-      <div className={styles.container}>
+    <div className="navbar">
+      <style jsx>{`
+        .navbar {
+          background-color: #25283d;
+          color: #fff;
+          height: 70px;
+        }
+
+        .navbar a {
+          color: #fff;
+          padding: 10px;
+          margin: 0 5px;
+        }
+
+        .navbar a:hover {
+          border-bottom: 2px #fff solid;
+        }
+
+        .navbar ul {
+          display: flex;
+        }
+
+        .navbar .flex {
+          justify-content: space-between;
+        }
+      `}</style>
+      <div className="container flex">
         <h1>honzza dvorak.</h1>
         <nav>
-          <ul className={styles.navbarul}>
+          <ul>
             <li>
               <Link href="/">
-                <a className={styles.navitem}>home</a>
+                <a>home</a>
               </Link>
             </li>
             <li>
               <Link href="/portfolio">
-                <a className={styles.navitem}>portfolio</a>
+                <a>portfolio</a>
               </Link>
             </li>
             <li>
               <Link href="/contact">
-                <a className={styles.navitem}>contact</a>
+                <a>contact</a>
               </Link>
             </li>
           </ul>
