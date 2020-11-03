@@ -1,28 +1,17 @@
+import { Text, Flex, Link, Box } from "@chakra-ui/core";
+
 export default function Footer() {
   return (
-    <footer className="footer bg-light py-3">
-      <style jsx>{`
-        .footer {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .footer .social a {
-          margin: 0 10px;
-        }
-      `}</style>
-      <div>
-        <p>webdesign honzza dvorak 2020</p>
-      </div>
-      <div className="social">
-        <a href="#">
+    <Flex direction="column" align="center" py="2rem" backgroundColor="#efd9ce">
+      <Text my="10px">webdesign honzza dvorak 2020</Text>
+      <Box>
+        <Link mx="10px" href="#">
           <i className="fab fa-github fa-2x"></i>
-        </a>
-        <a href="#">
+        </Link>
+        <Link mx="10px" href="#">
           <i className="fas fa-envelope fa-2x"></i>
-        </a>
-      </div>
-    </footer>
+        </Link>
+      </Box>
+    </Flex>
   );
 }
