@@ -1,19 +1,23 @@
 import NextLink from "next/link";
-import { Heading } from "@chakra-ui/core";
-import { List, ListItem, Link, Box, Flex } from "@chakra-ui/core";
+import { List, ListItem, Link, Box, Flex, Heading } from "@chakra-ui/core";
 
 export default function Navbar() {
   return (
-    <Box backgroundColor="#25283d" color="#fff" height="70px">
+    <Box
+      backgroundColor="#25283d"
+      color="#fff"
+      height={{ sm: "100px", md: "70px" }}
+    >
       <Flex
-        justify="space-between"
+        direction={{ sm: "column", md: "row" }}
+        justify={{ sm: "", md: "space-between" }}
         align="center"
         maxWidth="1100px"
         mx="auto"
         height="100%"
         px="40px"
       >
-        <Heading as="h1" fontWeight="200" fontSize="32px">
+        <Heading as="h1" fontWeight="200" fontSize="32px" my={{ sm: "10px", md: "0" }}>
           honzza dvorak.
         </Heading>
         <List display="flex">
