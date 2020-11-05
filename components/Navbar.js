@@ -1,23 +1,39 @@
 import NextLink from "next/link";
-import { List, ListItem, Link, Box, Flex, Heading } from "@chakra-ui/core";
+import {
+  List,
+  ListItem,
+  Link,
+  Box,
+  Flex,
+  Heading,
+  Button,
+  useColorMode,
+} from "@chakra-ui/core";
 
 export default function Navbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Box
       backgroundColor="#25283d"
       color="#fff"
-      height={{ sm: "100px", md: "70px" }}
+      height={{ xs: "100px", md: "70px" }}
     >
       <Flex
-        direction={{ sm: "column", md: "row" }}
-        justify={{ sm: "", md: "space-between" }}
+        direction={{ xs: "column", md: "row" }}
+        justify={{ xs: "", md: "space-between" }}
         align="center"
         maxWidth="1100px"
         mx="auto"
         height="100%"
         px="40px"
       >
-        <Heading as="h1" fontWeight="200" fontSize="32px" my={{ sm: "10px", md: "0" }}>
+        <Heading
+          as="h1"
+          fontWeight="200"
+          fontSize="32px"
+          my={{ xs: "10px", md: "0" }}
+        >
           honzza dvorak.
         </Heading>
         <List display="flex">
@@ -55,6 +71,9 @@ export default function Navbar() {
             </NextLink>
           </ListItem>
         </List>
+        <Button onClick={toggleColorMode}>
+          {colorMode === "light" ? "D" : "L"}
+        </Button>
       </Flex>
     </Box>
   );
