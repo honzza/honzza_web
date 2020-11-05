@@ -6,8 +6,9 @@ import {
   Box,
   Flex,
   Heading,
-  Button,
+  IconButton,
   useColorMode,
+  DarkMode,
 } from "@chakra-ui/core";
 
 export default function Navbar() {
@@ -36,44 +37,52 @@ export default function Navbar() {
         >
           honzza dvorak.
         </Heading>
-        <List display="flex">
-          <ListItem>
-            <NextLink href="/">
-              <Link
-                _hover={{ borderBottom: "2px #fff solid" }}
-                pb="5px"
-                mx="10px"
-              >
-                home
-              </Link>
-            </NextLink>
-          </ListItem>
-          <ListItem>
-            <NextLink href="/portfolio">
-              <Link
-                _hover={{ borderBottom: "2px #fff solid" }}
-                pb="5px"
-                mx="10px"
-              >
-                portfolio
-              </Link>
-            </NextLink>
-          </ListItem>
-          <ListItem>
-            <NextLink href="/contact">
-              <Link
-                _hover={{ borderBottom: "2px #fff solid" }}
-                pb="5px"
-                mx="10px"
-              >
-                contact
-              </Link>
-            </NextLink>
-          </ListItem>
-        </List>
-        <Button onClick={toggleColorMode}>
-          {colorMode === "light" ? "D" : "L"}
-        </Button>
+        <Box display="flex">
+          <List display="flex">
+            <ListItem mt="5px">
+              <NextLink href="/">
+                <Link
+                  _hover={{ borderBottom: "2px #fff solid" }}
+                  pb="5px"
+                  mx="10px"
+                >
+                  home
+                </Link>
+              </NextLink>
+            </ListItem>
+            <ListItem mt="5px">
+              <NextLink href="/portfolio">
+                <Link
+                  _hover={{ borderBottom: "2px #fff solid" }}
+                  pb="5px"
+                  mx="10px"
+                >
+                  portfolio
+                </Link>
+              </NextLink>
+            </ListItem>
+            <ListItem mt="5px">
+              <NextLink href="/contact">
+                <Link
+                  _hover={{ borderBottom: "2px #fff solid" }}
+                  pb="5px"
+                  mx="10px"
+                >
+                  contact
+                </Link>
+              </NextLink>
+            </ListItem>
+          </List>
+          <DarkMode>
+            <IconButton
+              aria-label="Toggle dark mode"
+              icon={{ light: "moon", dark: "sun" }[colorMode]}
+              size="sm"
+              ml="20px"
+              onClick={toggleColorMode}
+            />
+          </DarkMode>
+        </Box>
       </Flex>
     </Box>
   );
