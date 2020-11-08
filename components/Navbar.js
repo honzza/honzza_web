@@ -10,6 +10,7 @@ import {
   useColorMode,
   DarkMode,
 } from "@chakra-ui/core";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -18,13 +19,14 @@ export default function Navbar() {
     <Box
       backgroundColor="#25283d"
       color="#fff"
-      height={{ xs: "100px", md: "70px" }}
+      height={{ sm: "100px", md: "70px" }}
     >
       <Flex
-        direction={{ xs: "column", md: "row" }}
-        justify={{ xs: "", md: "space-between" }}
+        direction={{ sm: "column", md: "row" }}
+        justify={{ sm: "", md: "space-between" }}
         align="center"
         maxWidth="1100px"
+        minWidth="450px"
         mx="auto"
         height="100%"
         px="40px"
@@ -33,7 +35,7 @@ export default function Navbar() {
           as="h1"
           fontWeight="200"
           fontSize="32px"
-          my={{ xs: "10px", md: "0" }}
+          my={{ sm: "10px", md: "0" }}
         >
           honzza dvorak.
         </Heading>
@@ -76,7 +78,7 @@ export default function Navbar() {
           <DarkMode>
             <IconButton
               aria-label="Toggle dark mode"
-              icon={{ light: "moon", dark: "sun" }[colorMode]}
+              icon={{ light: <MoonIcon />, dark: <SunIcon /> }[colorMode]}
               size="sm"
               ml="20px"
               onClick={toggleColorMode}

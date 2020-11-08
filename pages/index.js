@@ -1,9 +1,18 @@
 import Layout from "../components/Layout";
 import { Stack, Box, Heading, Flex } from "@chakra-ui/core";
+import { SiNextDotJs } from "react-icons/si";
 
 function StackEx() {
   return (
-    <Stack isInline spacing={8} px="40px" my="30px" mx="auto" maxWidth="1100px">
+    <Stack
+      direction={{ sm: "column", md: "row" }}
+      spacing={8}
+      px="40px"
+      my="30px"
+      mx="auto"
+      maxWidth="1100px"
+      minWidth="450px"
+    >
       <Box p={5} shadow="md" borderWidth="1px">
         <Heading fontSize="xl" pb="10px">
           Languages
@@ -30,6 +39,10 @@ function StackEx() {
         <Flex>
           <Flex direction="column" align="center" mr="20px">
             <i class="fab fa-react fa-5x"></i>react
+          </Flex>
+          <Flex direction="column" align="center">
+            <SiNextDotJs size="80" />
+            next.js
           </Flex>
         </Flex>
       </Box>
