@@ -11,13 +11,12 @@ function StackEx() {
       my="30px"
       mx="auto"
       maxWidth="1100px"
-      minWidth="450px"
     >
       <Box p={5} shadow="md" borderWidth="1px">
         <Heading fontSize="xl" pb="10px">
           Languages
         </Heading>
-        <Flex>
+        <Flex wrap>
           <Flex direction="column" align="center" mr="20px">
             <i class="fab fa-html5 fa-5x"></i>html 5
           </Flex>
@@ -36,7 +35,7 @@ function StackEx() {
         <Heading fontSize="xl" pb="10px">
           Frameworks
         </Heading>
-        <Flex>
+        <Flex wrap>
           <Flex direction="column" align="center" mr="20px">
             <i class="fab fa-react fa-5x"></i>react
           </Flex>
