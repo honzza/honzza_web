@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import { Stack, Box, Heading, Flex } from "@chakra-ui/core";
+import { Stack, Box, Heading, Wrap, WrapItem, Center } from "@chakra-ui/core";
 import { SiNextDotJs } from "react-icons/si";
 
 function StackEx() {
@@ -16,34 +16,51 @@ function StackEx() {
         <Heading fontSize="xl" pb="10px">
           Languages
         </Heading>
-        <Flex wrap>
-          <Flex direction="column" align="center" mr="20px">
-            <i class="fab fa-html5 fa-5x"></i>html 5
-          </Flex>
-          <Flex direction="column" align="center" mr="20px">
-            <i class="fab fa-css3-alt fa-5x"></i>css 3
-          </Flex>
-          <Flex direction="column" align="center" mr="20px">
-            <i class="fab fa-js fa-5x"></i>javascript
-          </Flex>
-          <Flex direction="column" align="center">
-            <i class="fab fa-python fa-5x"></i>python
-          </Flex>
-        </Flex>
+        <Wrap>
+          <WrapItem>
+            <Center>
+              <i class="fab fa-html5 fa-5x"></i>
+              html 5
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center>
+              <i class="fab fa-css3-alt fa-5x"></i>
+              css 3
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center>
+              <i class="fab fa-js fa-5x"></i>
+              javascript
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center>
+              <i class="fab fa-python fa-5x"></i>
+              python
+            </Center>
+          </WrapItem>
+        </Wrap>
       </Box>
       <Box p={5} shadow="md" borderWidth="1px">
         <Heading fontSize="xl" pb="10px">
           Frameworks
         </Heading>
-        <Flex wrap>
-          <Flex direction="column" align="center" mr="20px">
-            <i class="fab fa-react fa-5x"></i>react
-          </Flex>
-          <Flex direction="column" align="center">
-            <SiNextDotJs size="80" />
-            next.js
-          </Flex>
-        </Flex>
+        <Wrap>
+          <WrapItem>
+            <Center>
+              <i class="fab fa-react fa-5x"></i>
+              react
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center>
+              <SiNextDotJs size="80" />
+              next.js
+            </Center>
+          </WrapItem>
+        </Wrap>
       </Box>
     </Stack>
   );
