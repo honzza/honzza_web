@@ -19,11 +19,11 @@ export default function Navbar() {
     <Box
       backgroundColor="#25283d"
       color="#fff"
-      height={{ sm: "100px", md: "70px" }}
+      height={{ base: "100px", md: "70px" }}
     >
       <Flex
-        direction={{ sm: "column", md: "row" }}
-        justify={{ sm: "", md: "space-between" }}
+        direction={{ base: "column", md: "row" }}
+        justify={{ base: "", md: "space-between" }}
         align="center"
         maxWidth="1100px"
         minWidth="450px"
@@ -35,7 +35,7 @@ export default function Navbar() {
           as="h1"
           fontWeight="200"
           fontSize="32px"
-          my={{ sm: "10px", md: "0" }}
+          my={{ base: "10px", md: "0" }}
         >
           honzza dvorak.
         </Heading>
