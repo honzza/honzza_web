@@ -5,7 +5,7 @@ import { SiNextDotJs } from "react-icons/si";
 function StackEx() {
   return (
     <Stack
-      direction={{ sm: "column", md: "row" }}
+      direction={{ base: "column", md: "row" }}
       spacing={8}
       px="40px"
       my="30px"
