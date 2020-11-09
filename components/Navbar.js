@@ -26,7 +26,6 @@ export default function Navbar() {
         justify={{ base: "", md: "space-between" }}
         align="center"
         maxWidth="1100px"
-        minWidth="450px"
         mx="auto"
         height="100%"
         px="40px"
