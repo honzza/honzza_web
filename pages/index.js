@@ -69,13 +69,45 @@ function StackExperience() {
 export default function Index() {
   return (
     <Layout>
-      {/* <Box bg="yellow" p={6}></Box>
-      <Box py="80px" ml="50%">
-        <Heading py="10px">HI, I'M</Heading>
-        <Heading py="10px" fontSize="64px">
+      <Box
+        position="absolute"
+        bg="rgb(188, 58, 128, .1)"
+        w="25vw"
+        h="25vw"
+        borderRadius="50%"
+        bottom="-5vw"
+        left="-5vw"
+        z-index="-1"
+      />
+      <Box
+        position="absolute"
+        bg="rgb(52, 87, 178, .1)"
+        w="25vw"
+        h="25vw"
+        borderRadius="50%"
+        top={{ base: "20vh", md: "15vh" }}
+        left={{ base: "60vw", md: "60vw" }}
+        z-index="-1"
+      />
+      <Box
+        py={{ base: "40px", md: "80px" }}
+        ml={{ base: "40px", md: "25%", lg: "35%", xl: "50%" }}
+      >
+        <Heading
+          py="10px"
+          fontSize={{ base: "24px", md: "32px", lg: "48px" }}
+          letterSpacing="wide"
+        >
+          HI, I'M
+        </Heading>
+        <Heading
+          py="10px"
+          fontSize={{ base: "32px", md: "48px", lg: "64px" }}
+          letterSpacing="wide"
+        >
           HONZZA DVORAK
         </Heading>
-      </Box> */}
+      </Box>
       <StackExperience />
     </Layout>
   );
